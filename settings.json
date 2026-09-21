@@ -53,5 +53,7 @@
     "after": ["<Esc>"]
   }
 ],
-"files.autoSave": "onWindowChange"
+"files.autoSave": "onWindowChange",
+"vim.useSystemClipboard": true
+
 }
