@@ -1,8 +1,29 @@
 alias gs="git status"
+alias gcp="git config pull.rebase false && git pull"
 alias gph="git push"
 alias gpl="git pull"
+alias lz="lazygit"
+alias glog="git log --oneline --graph --decorate --all"
+
+function gcmt() {
+  git add .
+  git commit -m "$*"
+}
 function lf() {
   git add .
   git commit -m "$*"
   git push
+}
+function gitRestore(){
+  git restore .
+  git clean -f   
+  git clean -df
+}
+
+function checkInGit(){
+  git ls-files --error-unmatch "$1"
+}
+
+function gitRmCached(){
+  git rm -rf --cached "$1"
 }
